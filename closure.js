@@ -461,3 +461,38 @@ function countryCodeToName(countryCode) {
                 return name;
         }
 }
+
+// -------------------------------------------------------------------------
+function getNumberType(phone, country) {
+        /*
+        
+        Guess the type of a number. Returns one of the following:
+        	'FIXED_LINE'
+        	'MOBILE'
+        	'FIXED_LINE_OR_MOBILE'
+        	'TOLL_FREE'
+        	'PREMIUM_RATE'
+        	'SHARED_COST'
+        	'VOIP'
+        	'PERSONAL_NUMBER'
+        	'PAGER'
+        	'UAN'
+        	'VOICEMAIL'
+        	'UNKNOWN'
+        
+        */
+        
+        try {
+                var phone = cleanPhone(phone);
+                var phoneUtil = i18n.phonenumbers.PhoneNumberUtil.getInstance();
+                var number = phoneUtil.parseAndKeepRawInput(phone, country);
+                var number_type = phoneUtil.getNumberType(number);
+                for (var k in i18n.phonenumbers.PhoneNumberType) {
+                	if (i18n.phonenumbers.PhoneNumberType[k] == number_type)
+                		return k;
+                }
+                return 'UNKNOWN';
+    } catch (e) {
+            return false;
+    }
+}
