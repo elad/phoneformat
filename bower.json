@@ -1,6 +1,6 @@
 {
 	"name": "phoneformat",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"main": "phoneformat.min.js",
 	"homepage": "https://github.com/elad/phoneformat"
 }
