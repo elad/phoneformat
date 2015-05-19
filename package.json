@@ -1,0 +1,22 @@
+{
+  "name": "phoneformat",
+  "version": "0.0.7",
+  "description": "This is a copy of [albeebe/phoneformat.js](https://github.com/albeebe/phoneformat.js) with the following changes:",
+  "main": "phoneformat.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elad/phoneformat.git"
+  },
+  "keywords": [
+    "phoneformat"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elad/phoneformat/issues"
+  },
+  "homepage": "https://github.com/elad/phoneformat#readme"
+}
